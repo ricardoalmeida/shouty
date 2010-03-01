@@ -1,0 +1,1 @@
+/Users/ricardoalmeida/Documents/projects/gonow/shouty/features/list_shouties.feature:3

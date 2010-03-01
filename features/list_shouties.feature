@@ -14,7 +14,7 @@ Feature: List Shouties
       |  my  |
       |  hi  |
 
-  Scenario: Home page
+  Scenario: logged out
 	Given I am logged out
 	When I go to the home page
-	Then I should see "Login Page"
+	Then I should see "create your account"

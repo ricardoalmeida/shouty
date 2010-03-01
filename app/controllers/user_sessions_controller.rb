@@ -15,7 +15,7 @@ class UserSessionsController < ApplicationController
   end
   
   def destroy
-    current_user_session.destroy
+    current_user_session.destroy if current_user_session
     flash[:notice] = I18n.t :logout_successful
     redirect_back_or_default root_path
   end

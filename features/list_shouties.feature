@@ -1,16 +1,20 @@
 Feature: List Shouties
 
   Scenario: Home page
-    Given I exist
     Given the following shouties exist
       | body | user_id |
       |  hi  |    1    |
       |  my  |    1    |
       | name |    1    |
       |  is  |    1    |
-    When I log in
+    When I am logged with "fulano"
     Then I should see shouties table
       |  is  |
       | name |
       |  my  |
       |  hi  |
+
+  Scenario: Home page
+	Given I am logged out
+	When I go to the home page
+	Then I should see "Login Page"

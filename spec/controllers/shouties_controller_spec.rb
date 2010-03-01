@@ -2,6 +2,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe ShoutiesController do
   should_have_before_filter :require_user
+  should_have_before_filter :assign_user, :only => [:create]
   
   context "with the user logged" do
     before :each do 
